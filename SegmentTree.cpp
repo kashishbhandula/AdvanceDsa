@@ -40,7 +40,7 @@ int RangeSum(int low, int high, int idx, int left, int right)
         return 0;
     int mid = (low + high) >> 1;
     return RangeSum(mid + 1, high, 2 * idx + 2, left, right) +
-           RangeSum(low, mid, 2 * idx, left + 1, right);
+           RangeSum(low, mid, 2 * idx + 1, left, right);
 }
 int main()
 {
